@@ -1,5 +1,5 @@
 name: Test
-"on":
+on:
   push:
     branches:
       - master
@@ -13,8 +13,9 @@ jobs:
     strategy:
       matrix:
         node-version:
-          - '14.17'
           - 16
+          - 18
+          - 21
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
