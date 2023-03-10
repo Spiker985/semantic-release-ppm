@@ -269,6 +269,6 @@ test('Verify token and set up auth only on the fist call, then prepare on prepar
   await mockServer.verify(verifyApmMock);
   await mockServer.verify(getApmVersionMock);
 
-  t.deepEqual(result, {name: 'Atom package', url: `https://atom.io/packages/${name}`});
+  t.deepEqual(result, {name: 'Pulsar package', url: `https://web.pulsar-edit.dev/packages/${name}`});
   t.is((await readJson(path.resolve(cwd, 'package.json'))).version, '1.0.0');
 });
